@@ -1,10 +1,10 @@
 {
-	"name": "odyssey-theme",
-	"version": "2.0.2",
-	"private": false,
+	"name": "ferienhaus-schwoch",
+	"version": "0.0.0",
+	"private": true,
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:treefarmstudio/odyssey-theme"
+		"url": "git@github.com:fre-ben/ferienhaus-schwoch.git"
 	},
 	"scripts": {
 		"dev": "astro dev",
@@ -15,15 +15,16 @@
 	},
 	"devDependencies": {
 		"@astrojs/lit": "^4.0.1",
-		"@astrojs/mdx": "^2.1.1",
-		"@astrojs/sitemap": "^0.1.0",
+		"@astrojs/mdx": "^3.0.0",
+		"@astrojs/sitemap": "^3.1.4",
+		"@iconify-json/ic": "^1.1.17",
+		"@iconify-json/mdi": "^1.1.64",
 		"@webcomponents/template-shadowroot": "^0.2.1",
-		"astro": "^4.4.13",
+		"astro": "^4.8.3",
 		"astro-icon": "^1.1.0",
 		"date-fns": "^2.28.0",
 		"lit": "^3.1.2",
-		"prettier-plugin-astro": "^0.0.12",
-    "@iconify-json/ic": "^1.1.17",
-    "@iconify-json/mdi": "^1.1.64"
+		"prettier": "3.2.5",
+		"prettier-plugin-astro": "^0.13.0"
 	}
 }
