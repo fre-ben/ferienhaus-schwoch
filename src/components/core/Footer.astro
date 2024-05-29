@@ -9,7 +9,7 @@ const {
   copyrightName,
   background,
   color,
-  showLittleSticksPlug = true,
+  showLittleSticksPlug = false,
 } = Astro.props;
 ---
 
@@ -69,7 +69,6 @@ const {
   footer {
     --footer-bg: var(--theme-primary);
     --footer-color: var(--theme-on-primary);
-    min-height: 10vh;
     background-color: var(--footer-bg);
     color: var(--footer-color);
     border-top-left-radius: var(--theme-shape-radius);
