@@ -1,16 +1,7 @@
 ---
-import { Icon } from 'astro-icon/components';
 import Container from '../core/Container.astro';
-import LittleSticksPlug from './LittleSticksPlug.astro';
 
-const {
-  footerSocials,
-  footerLists,
-  copyrightName,
-  background,
-  color,
-  showLittleSticksPlug = false,
-} = Astro.props;
+const { footerLists, copyrightName, background, color } = Astro.props;
 ---
 
 <footer
@@ -36,7 +27,6 @@ const {
       }
     </div>
     <div class="footer-copyright__container">
-      {showLittleSticksPlug && <LittleSticksPlug />}
       <p>Copyright &copy; {new Date().getFullYear()} {copyrightName}</p>
     </div>
   </Container>
@@ -53,7 +43,7 @@ const {
   }
 
   .footer-grid__container {
-    padding: 3vh 0 1rem 0;
+    padding: 1vh 0 0 0;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -94,7 +84,7 @@ const {
 
   @media (max-width: 768px) {
     .footer-grid__container {
-      padding: 5vh 0;
+      padding: 2vh 0 0 0;
       grid-template-columns: 1fr;
       gap: 1rem;
 
@@ -105,7 +95,7 @@ const {
   }
   @media (max-width: 600px) {
     .footer-grid__container {
-      padding: 5vh 0;
+      padding: 2vh 0 0 0;
       grid-template-columns: 1fr;
       gap: 1rem;
     }

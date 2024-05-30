@@ -22,3 +22,12 @@ pre {
 pre .language-id {
   display: none;
 }
+
+h1,
+h2,
+h3,
+h4 {
+  word-break: break-word; /* Allow breaking within words */
+  word-wrap: break-word; /* Allow wrapping within words */
+  overflow-wrap: break-word; /* Ensures compatibility with all browsers */
+}
