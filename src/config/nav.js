@@ -9,6 +9,6 @@ export const nav = [
   },
   {
     title: 'Kontakt',
-    slug: '/kontact',
+    slug: '/kontakt',
   },
 ];

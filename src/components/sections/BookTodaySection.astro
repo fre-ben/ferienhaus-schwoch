@@ -1,0 +1,21 @@
+---
+import { Button } from '@components/odyssey-theme';
+import CtaCardSection from './CtaCardSection.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<CtaCardSection
+  background="var(--theme-surface-2)"
+  color="var(--theme-on-surface-2)"
+>
+  <h2>Buchen Sie noch heute!</h2>
+  <p>
+    Rufen Sie uns an oder schreiben Sie uns eine E-Mail, um Ihren Urlaub im
+    Böllenhäuschen zu buchen.
+  </p>
+  <Button href="/kontakt" customIcon
+    >Kontakt <Fragment slot="icon">
+      <Icon name="ic:baseline-chevron-right" />
+    </Fragment></Button
+  >
+</CtaCardSection>

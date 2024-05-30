@@ -78,11 +78,13 @@ const { navData, rightMenu } = Astro.props;
 <style>
   header {
     width: 100%;
-    padding: 1rem 0.5rem;
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--theme-surface-1);
   }
+
   header.header--right {
     display: grid;
     grid-template-columns: 1fr auto auto;
@@ -133,6 +135,9 @@ const { navData, rightMenu } = Astro.props;
     opacity: 1;
   }
   @media (max-width: 600px) {
+    header {
+      padding: 1rem 0.5rem;
+    }
     #menuButton {
       display: block;
       z-index: 100;
@@ -150,6 +155,7 @@ const { navData, rightMenu } = Astro.props;
       z-index: 99;
     }
     header[mobile-menu-open] .header-nav__container {
+      background-color: var(--theme-surface-1);
       display: flex;
     }
     header[mobile-menu-open] nav ul {

@@ -1,17 +1,8 @@
 ---
 import { Icon } from 'astro-icon/components';
-import {
-  AnnouncementBar,
-  Button,
-  CustomerQuoteSection,
-  ThreeColumnTextSection,
-  YouTubeEmbedSection,
-  StickyTextImageSection,
-  CtaCardSection,
-  TextCardSection,
-  TextSection,
-} from '@components/odyssey-theme';
+import { TextSection } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
+import BookTodaySection from '@components/sections/BookTodaySection.astro';
 
 const seo = {
   title: 'Böllenhäuschen | Ferienwohnung in Hollenstedt',
@@ -20,11 +11,6 @@ const seo = {
 };
 ---
 
-<!-- <AnnouncementBar
-	text="Read Our Latest Blog Post"
-	href="/blog/posts/remote-work-mental-health/"
-	slot="announcement-bar"
-/> -->
 <Layout {seo}>
   <TextSection>
     <h1>Preise</h1>
@@ -33,7 +19,7 @@ const seo = {
       Übernachtungsgäste und der Dauer Ihres Aufenthalts.
       <br />
       Hier finden Sie eine Übersicht über die Preise pro Nacht und die einmaligen
-      Kosten für Ihren Aufenthalt.
+      Kosten für Ihren Aufenthalt:
     </p>
 
     <div class="table-wrapper">
@@ -77,22 +63,7 @@ const seo = {
     </div>
   </TextSection>
 
-  <!-- Todo: in Komponente auslagern -->
-  <CtaCardSection
-    background="var(--theme-surface-2)"
-    color="var(--theme-on-surface-2)"
-  >
-    <h2>Buchen Sie noch heute!</h2>
-    <p>
-      Rufen Sie uns an oder schreiben Sie uns eine E-Mail, um Ihren Urlaub im
-      Böllenhäuschen zu buchen.
-    </p>
-    <Button href="/kontakt" customIcon
-      >Kontakt <Fragment slot="icon">
-        <Icon name="ic:baseline-chevron-right" />
-      </Fragment></Button
-    >
-  </CtaCardSection>
+  <BookTodaySection />
 </Layout>
 
 <style lang="scss">
