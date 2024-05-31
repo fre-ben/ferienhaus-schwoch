@@ -1,0 +1,56 @@
+---
+import { Container, TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import ImageLink from '@components/image/ImageLink.astro';
+
+const images = await Astro.glob('../../../public/assets/images/raw/*').then(
+  (files) => {
+    return files.map((file) => file.default);
+  },
+);
+
+const seo = {
+  title: 'Infos | Böllenhäuschen',
+  description:
+    'Böllenhäuschen - Ihre gemütliche Ferienwohnung in Hollenstedt. Entspannen Sie im Leinetal und erleben Sie erholsame Tage fernab vom Alltagsstress.',
+};
+---
+
+<Layout {seo}>
+  <TextSection>
+    <h1>Infos</h1>
+    <p>
+      Das Ferienhaus liegt in einer ruhigen Lage direkt am Bach und ohne
+      Durchfahrtsstraße. <br /> Es sind zwei Schlafzimmer mit einen Doppelbett und
+      zwei Einzelbetten sowie ein Kinderzimmer mit einem Einzelbett und das Badezimmer
+      im Obergeschoss. <br /> Im Erdgeschoss ist das Wohnzimmer mit Kaminofen, Esszimmer
+      und Küche. <br /> Draußen ist ein großer Garten mit Freisitz, Kinderschaukel,
+      Lagerfeuerstelle und Grill. <br />In die Bierstadt Einbeck sind es mit dem
+      Auto nur 10 min, nach Northeim auch und bis zur Autobahn A7 nur 5 min.
+      <br /> Hunde sind herzlich willkommen.
+    </p>
+    <p>Die Adresse ist Northeim Ortsteil Hollenstedt.</p>
+    <p>Die aktuellen Preise finden Sie hier: <a href="/preise">Preise</a></p>
+  </TextSection>
+
+  <TextSection>
+    <h2>Bilder</h2>
+    <Container>
+      <div class="image-grid">
+        {
+          images.map((image) => (
+            <ImageLink image={image} alt="Böllenhäuschen" />
+          ))
+        }
+      </div>
+    </Container>
+  </TextSection>
+</Layout>
+
+<style lang="scss">
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+</style>

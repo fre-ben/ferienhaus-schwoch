@@ -4,6 +4,10 @@ export const nav = [
     slug: '/',
   },
   {
+    title: 'Infos',
+    slug: '/infos',
+  },
+  {
     title: 'Preise',
     slug: '/preise',
   },

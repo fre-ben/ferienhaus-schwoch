@@ -1,0 +1,21 @@
+---
+import { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+  image: ImageMetadata;
+  alt: string;
+}
+
+const { image, alt } = Astro.props;
+---
+
+<a target="_blank" href={image.src}>
+  <Image src={image} alt={alt} class="image-link" />
+</a>
+
+<style lang="scss">
+  .image-link {
+    height: auto;
+  }
+</style>
