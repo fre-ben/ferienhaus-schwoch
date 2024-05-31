@@ -1,0 +1,35 @@
+---
+import { TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+
+const seo = {
+  title: 'Kontakt | Böllenhäuschen',
+  description:
+    'Böllenhäuschen - Ihre gemütliche Ferienwohnung in Hollenstedt. Entspannen Sie im Leinetal und erleben Sie erholsame Tage fernab vom Alltagsstress.',
+};
+---
+
+<Layout {seo}>
+  <TextSection>
+    <h1>Kontakt</h1>
+    <p>
+      Für weitere Informationen oder Buchungsanfragen können Sie uns gerne
+      kontaktieren:
+    </p>
+    <p class="contact-address">
+      Alexander Schwoch <br />
+      Telefon: +49 123456789<br />
+      E-Mail: info@boellenhaeuschen.de<br />
+    </p>
+    <p>
+      Bitte geben Sie bei Buchungsanfragen die Anzahl der Personen sowie das
+      gewünschte Datum mit an.
+    </p>
+  </TextSection>
+</Layout>
+
+<style lang="scss">
+  .contact-address {
+    margin-left: 2rem;
+  }
+</style>
