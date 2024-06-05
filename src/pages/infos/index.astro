@@ -2,6 +2,7 @@
 import { Container, TextSection } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
 import ImageLink from '@components/image/ImageLink.astro';
+import BookTodaySection from '@components/sections/BookTodaySection.astro';
 
 const images = await Astro.glob('../../../public/assets/images/raw/*').then(
   (files) => {
@@ -36,6 +37,7 @@ const seo = {
   <TextSection>
     <h2>Bilder</h2>
     <Container>
+      <!-- TODO: popover API testen -->
       <div class="image-grid">
         {
           images.map((image) => (
@@ -45,6 +47,27 @@ const seo = {
       </div>
     </Container>
   </TextSection>
+
+  <TextSection>
+    <h2>Hollenstedt</h2>
+    <p>
+      Hollenstedt liegt im Leinetal links der Leine in unmittelbarer Nähe zur
+      Northeimer Seenplatte kurz unterhalb der Mündung des Flusses Rhume in die
+      Leine.
+      <br />Die Landesstraße L 572 verbindet Hollenstedt über ein unter
+      Denkmalschutz stehendes Brückenbauwerk mit dem Stadtzentrum Northeims.
+      <br />Direkt beim Ort mündet der Bach „Bölle“ in die Leine.
+      <br />
+    </p>
+    <p>
+      Rund 100 Meter nördlich des Dorfes, unmittelbar an der L 572, befindet
+      sich die Aussichtsplattform Geschiebesperre, von der man die unter
+      Naturschutz stehende Leineniederung Salzderhelden mit ihren Wasservögeln
+      beobachten kann.
+    </p>
+  </TextSection>
+
+  <BookTodaySection />
 </Layout>
 
 <style lang="scss">
