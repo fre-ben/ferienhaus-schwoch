@@ -1,6 +1,5 @@
 ---
 import settings from '../../config/settings.js';
-import ThemeProvider from '../theme-switcher/ThemeProvider.astro';
 
 import '../../styles/index.css';
 
@@ -42,11 +41,3 @@ const image = new URL(Astro.props.image || './social.png', Astro.site);
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={image} />
-
-<!-- Google Analytics -->
-<script>
-  const host = window.location.hostname;
-  if (host != 'localhost') {
-    // Place Google Analytics code here.
-  }
-</script>
