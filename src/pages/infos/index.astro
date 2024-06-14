@@ -30,14 +30,17 @@ const seo = {
       Auto nur 10 min, nach Northeim auch und bis zur Autobahn A7 nur 5 min.
       <br /> Hunde sind herzlich willkommen.
     </p>
-    <p>Die Adresse ist Northeim Ortsteil Hollenstedt.</p>
+    <p>
+      Die Adresse ist Northeim Ortsteil Hollenstedt: <strong>
+        Böllenstraße 13, 37154 Northeim
+      </strong>
+    </p>
     <p>Die aktuellen Preise finden Sie hier: <a href="/preise">Preise</a></p>
   </TextSection>
 
   <TextSection>
     <h2>Bilder</h2>
     <Container>
-      <!-- TODO: popover API testen -->
       <div class="image-grid">
         {
           images.map((image) => (
@@ -75,5 +78,11 @@ const seo = {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .image-grid {
+      grid-template-columns: unset;
+    }
   }
 </style>
