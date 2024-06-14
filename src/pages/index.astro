@@ -44,3 +44,19 @@ const seo = {
 
   <BookTodaySection />
 </Layout>
+
+<style lang="scss">
+  h1 {
+    word-break: unset;
+    word-wrap: unset;
+    overflow-wrap: unset;
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      word-break: break-word; /* Allow breaking within words */
+      word-wrap: break-word; /* Allow wrapping within words */
+      overflow-wrap: break-word; /* Ensures compatibility with all browsers */
+    }
+  }
+</style>
