@@ -1,0 +1,49 @@
+---
+import { Container, TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import ImageLink from '@components/image/ImageLink.astro';
+import BookTodaySection from '@components/sections/BookTodaySection.astro';
+
+const images = await Astro.glob('../../../public/assets/images/raw/*').then(
+  (files) => {
+    return files.map((file) => file.default);
+  },
+);
+
+const seo = {
+  title: 'Bilder | Böllenhäuschen',
+  description:
+    'Böllenhäuschen - Ihre gemütliche Ferienwohnung in Hollenstedt. Entspannen Sie im Leinetal und erleben Sie erholsame Tage fernab vom Alltagsstress.',
+};
+---
+
+<Layout {seo}>
+  <TextSection>
+    <h1>Bilder</h1>
+    <Container>
+      <div class="image-grid">
+        {
+          images.map((image) => (
+            <ImageLink image={image} alt="Böllenhäuschen" />
+          ))
+        }
+      </div>
+    </Container>
+  </TextSection>
+
+  <BookTodaySection />
+</Layout>
+
+<style lang="scss">
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .image-grid {
+      grid-template-columns: unset;
+    }
+  }
+</style>

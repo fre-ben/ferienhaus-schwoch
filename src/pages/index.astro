@@ -4,6 +4,13 @@ import { Button, CustomerQuoteSection } from '@components/odyssey-theme';
 import Layout from '../layouts/Page.astro';
 import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
 import BookTodaySection from '@components/sections/BookTodaySection.astro';
+import { Image } from 'astro:assets';
+
+const image = await Astro.glob(
+  '../../public/assets/images/raw/streifen.png',
+).then((images) => {
+  return images.map((image) => image.default);
+});
 
 const seo = {
   title: 'Böllenhäuschen | Ferienwohnung in Hollenstedt',
@@ -13,6 +20,7 @@ const seo = {
 ---
 
 <Layout {seo}>
+  <Image src={image[0]} alt="" class="image" />
   <TextAndImageHero reversed>
     <div slot="text-container">
       <h1>Böllenhäuschen</h1>
@@ -50,6 +58,10 @@ const seo = {
     word-break: unset;
     word-wrap: unset;
     overflow-wrap: unset;
+  }
+
+  .image {
+    height: auto;
   }
 
   @media (max-width: 600px) {
