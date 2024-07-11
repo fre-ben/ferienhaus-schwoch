@@ -6,11 +6,11 @@ import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astr
 import BookTodaySection from '@components/sections/BookTodaySection.astro';
 import { Image } from 'astro:assets';
 
-const image = await Astro.glob(
-  '../../public/assets/images/raw/streifen.png',
-).then((images) => {
-  return images.map((image) => image.default);
-});
+const image = await Astro.glob('../../public/assets/images/streifen.png').then(
+  (images) => {
+    return images.map((image) => image.default);
+  },
+);
 
 const seo = {
   title: 'Böllenhäuschen | Ferienwohnung in Hollenstedt',
